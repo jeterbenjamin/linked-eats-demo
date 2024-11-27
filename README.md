@@ -14,7 +14,7 @@
 - 1: Data is delivered in `.ndjson` vs `csv` <- this greatly simplifies DDL, and CSV as a data interchange format isn't ideal; code is supplied in `convert_to_ndjson.R` to do so, and is commented.
 - 2: `orders_ib` is fully specified as an Iceberg table which is created from the external table (see below); `order_items` is also an Iceberg table, and to satisfy incremental refresh it's trivial to schedule `refresh materialized view <whatever>` on a cron; as the default platform config is to use Iceberg, incremental refresh is supported; see `/sql/ddl/order_items.sql` for further details
 - 3: DDL for all _external_ tables is provided (`/sql/ddl/`), but in order to keep the scope of this _very long_ take home within reason I've provided this as an example.
-- 4: The provided code all works and has been run; you're free to use the environment with the free cluster (**this has a 1 hour timeout**
+- 4: The provided code all works and has been run; you're free to use the environment with the free cluster (**this has a 1 hour timeout; warm-starting the cluster takes a minute or two**) 
 - 5: There is no specific physical data model, as the data is small & it's not necessary. Typically this is an important step, but I've skipped that here as well to keep time and effort manageable.
 
 ```
