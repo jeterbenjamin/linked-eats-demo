@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Trino - Free" uuid="ab7de2d9-2b01-45c7-8d37-6da182d0b594">
+      <driver-ref>trino</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>io.trino.jdbc.TrinoDriver</jdbc-driver>
+      <jdbc-url>jdbc:trino://jeterbenjamin-free-cluster.trino.galaxy.starburst.io:443/</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
